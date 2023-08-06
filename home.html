@@ -4,14 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <style>
+      .form-control:focus{
+    border-color: #ced4da !important;
+    box-shadow: 0px 0px 0px white !important;
+    color: white !important;
+}
+.form-control{
+  background: transparent !important;
+}
+.form-control::placeholder{
+  color: white !important;
+}
+.main{
+  background: linear-gradient(112.1deg, black 50.4%, rgb(32, 38, 57).8%);
+  height: 100vh;
+}
+.btn{
+  background: transparent !important;
+  border-color: white !important;
+}
+
+    </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2 class="mt-5">CUSTOM POST</h2>
+    <div class="main" style="display: flex; flex-direction: column; align-items: center;">
+        <h2 class="mt-5" style="color: white;">CUSTOM POST</h2>
     <div class="input-group flex-nowrap mt-2" style="width: 500px;" >
   <span class="input-group-text" id="addon-wrapping"><i class="fa-regular fa-user"></i></span>
   <input type="text" id="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="addon-wrapping">

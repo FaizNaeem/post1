@@ -15,16 +15,17 @@ const get_date = async () => {
 
         //  console.log(url);
         let add_img = document.getElementById("main").innerHTML += `
-            <div class="card cn m-2"  style="width: 300px" >
+            <div class="card cn mt-3 mb-3 " id="card-main"  style="width: 300px" >
             <img src="${url1}" class="card-img-top  custom-img" alt="...">
             <div class="card-body">
-            <h5 class="card-title cart">${doc.data().text} <i class="fa-regular heart fa-heart"></i></h5>
-            <p class="card-text cartd">${doc.data().textarea}</p>
-            <h5 class="card-title cart"><i class="fa-solid fa-dollar-sign"></i>${doc.data().price} </h5>
+            <h5 class="card-title cart" id="black">${doc.data().text} <i class="fa-regular heart fa-heart"></i></h5>
+            <p class="card-text cartd"   id="p">${doc.data().textarea}</p>
+            <h5 class="card-title cart"  id="h5"><i class="fa-solid fa-dollar-sign"></i>${doc.data().price} </h5>
            
-<button type="button" onclick="edit('${doc.id}')" id="Change"  class="btn bn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-pen-to-square"></i></button>
+<button type="button" onclick="edit('${doc.id}')" id="Change"  class="btn bn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i id="edit" class="fa-solid fa-light fa-pen-to-square"></i></button>
 
-              <a href="#" class="b"> <button class="btn btn-danger" onclick="dlt('${doc.id}')"><i class="fa-solid  fa-trash"></i> </button></a>
+              <a href="#" class=""> <button class="btn btn-success" id="addTO">Add To Card</button></a>
+              <a href="#" class="b"> <button class="btn btn-danger"  id="dlt" onclick="dlt('${doc.id}')"><i class="fa-solid  fa-trash"></i> </button></a>
             </div>
           </div>
             `
@@ -63,7 +64,12 @@ async function edit(e) {
     let price = document.getElementById("number")
     console.log(text.value)
     if (text.value == '' || textarea.value == '' || price.value == '') {
-      alert("please fill out")
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please Fill This Input',
+       
+      })
     }
     else {
       let file = document.getElementById("file").files[0]
@@ -79,12 +85,12 @@ async function edit(e) {
         });
         console.log("Document written with ID: ", e);
         // alert("data save succes")
-        Swal.fire(
-          'Good job!',
-          'UPDATE SUCCES 😍',
-          'success'
-        )
-        document.getElementById("Change").innerText = "Update"
+        // Swal.fire(
+        //   'Good job!',
+        //   'UPDATE SUCCES 😍',
+        //   'success'
+        // )
+        // document.getElementById("Change").innerText = "Update"
         // img_id =docRef.id
         // console.log("id" ,img_id );
       } catch (e) {
@@ -97,11 +103,21 @@ async function edit(e) {
       uploadBytes(storageRef, file).then((snapshot) => {
         console.log('Uploaded a blob or file!');
         // alert("pic upload succes")
-        Swal.fire(
-          'Good job!',
-          'Upload Succes ❤',
-          'success'
-        )
+        // Swal.fire(
+        //   'Good job!',
+        //   'Upload Succes ❤',
+        //   'success'
+        // )
+        
+Swal.fire({
+  title: 'Update Succes ❤',
+  showClass: {
+    popup: 'animate__animated animate__fadeInDown'
+  },
+  hideClass: {
+    popup: 'animate__animated animate__fadeOutUp'
+  }
+})
       });
       setTimeout(() => {
         location.reload()
@@ -117,7 +133,15 @@ async function dlt(id) {
   // Delete the file
   deleteObject(desertRef).then(() => {
     // File deleted successfully
-    alert("pic edit")
+    Swal.fire({
+      title: 'Delete Succes ❤',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
     // window.reload()
   }).catch((error) => {
     // Uh-oh, an error occurred!
@@ -127,3 +151,30 @@ async function dlt(id) {
 window.dlt = dlt
 
 get_date()
+
+document.getElementById("dark").addEventListener("click",()=>{
+document.getElementById("main").style.background="white"
+document.getElementById("card-main").style.color="black"
+document.getElementById("black").style.color="black"
+document.getElementById("p").style.color="black"
+document.getElementById("h5").style.color="black"
+document.getElementById("Change").style.background="black"
+document.getElementById("edit").style.background="black"
+// document.getElementById("Change").style.border="1px solid black !important"
+document.getElementById("card-main").style.border="1px solid black"
+document.getElementById("nav").style.background="white"
+document.getElementById("navbar-brand").style.color="black"
+document.getElementById("dark").style.color="black"
+document.getElementById("dark1").style.color="black"
+document.getElementById("dark2").style.color="black"
+document.getElementById("dlt").style.color="black"
+// document.getElementById("dlt").style.border="1px solid black"
+document.getElementById("post").style.color="black"
+document.getElementById("post").style.background="white"
+
+})
+
+document.getElementById("dark2").addEventListener("click",()=>{
+window.location.reload()
+console.log(hello);
+})
