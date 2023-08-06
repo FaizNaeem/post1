@@ -24,7 +24,7 @@ const get_date = async () => {
            
 <button type="button" onclick="edit('${doc.id}')" id="Change"  class="btn bn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i id="edit" class="fa-solid fa-light fa-pen-to-square"></i></button>
 
-              <a href="#" class=""> <button class="btn btn-success" id="addTO">Add To Card</button></a>
+              <a href="#" class=""> <button class="btn btn-success" id="addTO" onclick="card('${doc.id}')">Add To Card</button></a>
               <a href="#" class="b"> <button class="btn btn-danger"  id="dlt" onclick="dlt('${doc.id}')"><i class="fa-solid  fa-trash"></i> </button></a>
             </div>
           </div>
@@ -149,7 +149,15 @@ async function dlt(id) {
   await deleteDoc(doc(db, "postapp", id));
 }
 window.dlt = dlt
+function card(e) {
+  console.log(e);
+  localStorage.setItem("id" , e)
+  setTimeout(() => {
+      window.location.href = './card.html'
+  }, 2000);
+}
 
+window.card = card
 get_date()
 
 document.getElementById("dark").addEventListener("click",()=>{
