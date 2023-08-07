@@ -1,0 +1,39 @@
+.form-control:focus{
+    border-color: #ced4da !important;
+    box-shadow: 0px 0px 0px white !important;
+    color: white !important;
+}
+.form-control{
+  background: transparent !important;
+}
+.form-control::placeholder{
+  color: white !important;
+}
+.main{
+  background: linear-gradient(112.1deg, black 50.4%, rgb(32, 38, 57).8%);
+  height: 100vh;
+}
+.btn{
+  background: transparent !important;
+  border-color: white !important;
+}
+
+@media only screen and (max-width: 400px) {
+    .flex-nowrap{
+      
+      width: 300px !important;
+    }
+    .form-floating{
+      width: 300px !important;
+    }
+    .file{
+      width: 300px !important;
+    }
+    .btn-primary{
+      width: 300px !important;
+      
+    }
+    }
+    .navbar{
+        background: linear-gradient(112.1deg, rgb(32, 38, 57) 61.3%, black.8%) !important;
+    }
