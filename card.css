@@ -1,11 +1,11 @@
 img{
-    width: 750px;
+    /* width: 750px; */
     /* position: relative; */
     /* left: 10%; */
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /* border-top-right-radius: 10px; */
+    /* border-bottom-right-radius: 10px; */
     /* margin-left: 20px; */
-    height: 400px;
+    /* height: 400px; */
     /* top: 20%; */
     /* margin-top: 10px; */
 }
@@ -19,19 +19,37 @@ h6{
 }
 .span{
     font-weight: 500;
-    margin-left: 5px;
+    /* margin-left: 5px; */
 }
 #card{
+    /* border: 1px solid black; */
+    /* width: 750px; */
+    /* height: 600px; */
+}
+.left{
+    border:1px solid black;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.right{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
     border: 1px solid black;
-    width: 750px;
-    height: 600px;
+    /* justify-content: center; */
+    /* flex-direction: column; */
+/* flex-direction: row; */
 }
 .col{
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    flex: none;
+    /* justify-content: center; */
 }
 input{
     width: 50px;
+    height: 40px;
     text-align: center;
 /* border-bottom-color: gray; */
 border: none;
@@ -40,13 +58,14 @@ border: none;
     /* border: none; */
     outline: none;
     width: 50px !important;
+    height: 40px !important;
     /* background-color:rgb(141, 141, 188) ;  */
-    padding: 5px;
+    /* padding: 5px; */
     /* : black; */
     /* width: 0px; */
 }
 .pu{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* margin-top: 20px; */
 }

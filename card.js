@@ -18,20 +18,23 @@ const getDat = async () => {
         getDownloadURL(ref(storage,  localStorage.getItem("id")))
             .then((url) => {
                 document.getElementById("card").innerHTML+=`
-<img src="${url}" alt="">
-<h6>Product Name:<span class="span">${docSnap.data().text}</span></h6>
-<h6>Price:<span class="span">${docSnap.data().price}</span></h6>
-<h6>Description:<span class="span">${docSnap.data().textarea}</span></h6>
-<div class="col co">
-<button class="but btn btn-primary" onclick="minus()">-</button>
-<input type="text" name="" id="val"  placeholder="0">
-<button class="but btn btn-primary" onclick="plus()">+</button>
-
-
-</div>
-<div class="pu">
-<a href="#" class=""> <button class="btn btn-success" id="addTO" onclick="card('${doc.id}')">Purchase Now</button></a>
-</div>
+                <div class="col-lg-7 col-sm-12 left">
+                <img src="${url}" alt="">
+              </div>
+              <div class="col-lg-5 col-sm-12 right">
+                  <h6>Product Name:<span class="span">${doc.data().title}</span></h6>
+              <h6>Price:<span class="span">${doc.data().price}</span></h6>
+              <h6>Description:<span class="span">${doc.data().textarea}</span></h6>
+              <div class="col co">
+              <button class="but btn btn-primary" onclick="minus()">-</button>
+              <input type="text" name="" id="val"  placeholder="0">
+              <button class="but btn btn-primary" onclick="plus()">+</button>
+              </div>
+              <a href="./userdetails.html" class=""> <button class="btn btn-success mt-5" id="addTO" onclick="card('${doc.id}')">Purchase Now</button></a>
+              <!-- <div class="pu"> -->
+                  <!-- </div> -->
+              
+                    </div>
 `
                 // console.log(url);
             })
