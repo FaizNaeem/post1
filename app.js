@@ -2,6 +2,17 @@ import { getStorage, ref, uploadBytes ,getDownloadURL} from "https://www.gstatic
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 import { onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import { db  } from "./firebase.mjs";
+
+Swal.fire({
+    title: "Key🗝",
+    text: "Please Enter Key",
+    input: 'text',
+    showCancelButton: true        
+  }).then((result) =>{
+    if (result.value=="Faiz12345") {
+     document.getElementById("admin").className="admin"
+    
+
 document.getElementById("btn").addEventListener("click", async () => {
     var textarea = document.getElementById("textarea").value;
     var text = document.getElementById("text").value;
@@ -45,3 +56,13 @@ let img_id ;
 window.location.href="./index.html"
     },5000)
     });
+}
+else{
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please Enter Correct Key',
+       
+      })
+}
+});
