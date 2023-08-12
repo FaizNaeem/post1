@@ -34,6 +34,10 @@
   
 }
 }
+#addTO{
+    /* align-items: center; */
+width: 250px !important;
+}
 </style>
 
 </head>
@@ -48,14 +52,25 @@
           <button class="btn btn-outline-light " id="dark" style="border-color: grey;" type="submit"><i class="fa-solid fa-circle-half-stroke"></i></button>
           <button class="btn btn-outline-light " id="dark2" style="border-color: grey;" type="submit"><i class="fa-solid fa-moon"></i></button>
        <!-- </a> -->
-        <a href="./home.html">
-          <button class="btn btn-outline-light" id="dark1" style="border-color: gray;" type="submit">POST</button>
-       </a>
+        <!-- <a href="./admin.html">
+          <button class="btn btn-outline-light" id="dark1" style="border-color: gray;" type="submit">Login</button>
+       </a> -->
+       <div class="dropdown">
+        <button class="btn btn-outline-light dropdown-toggle"  type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-three-dots-vertical"></i> 
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#" onclick="hello()"><i class="bi bi-pencil-fill"></i> Logout</a></li>
+                <li><a class="dropdown-item" href="login.html"><i class="bi bi-trash-fill"></i> Login</a></li>
+                <li><a class="dropdown-item" href="signup.html"><i class="bi bi-eye-fill"></i> Signup</a></li>
+            </ul>
+    </div>
       </div>
     </nav>
   </div>
   <!-- nav bar end  -->
-  <h1 class="h1" id="post" style="color: white;" >Your Post❤</h1>
+  <h1 class="h1" id="post" style="color: white;" >Product</h1>
   <div class="container-fluid row" id="main">
 
   </div>
@@ -63,41 +78,7 @@
   <!-- Button trigger modal -->
 
 <!-- Modal -->
-<div class="modal fade cm" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div style="display: flex; flex-direction: column; align-items: center;">
-          <h2 class="mt-1">Edit POST</h2>
-      <div class="input-group flex-nowrap mt-2" style="width: 400px;" >
-    <span class="input-group-text" id="addon-wrapping"><i class="fa-regular fa-user"></i></span>
-    <input type="text" id="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="addon-wrapping">
-  </div>
-      <div style="display: flex; flex-direction: column; align-items: center;">
-      <div class="input-group flex-nowrap mt-2" style="width: 400px;" >
-    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-dollar-sign"></i></span>
-    <input type="number" id="number" class="form-control" placeholder="Price" aria-label="Price" aria-describedby="addon-wrapping">
-  </div>
-  
-  <div class="form-floating mt-2" style="width: 400px;" >
-      <textarea class="form-control"  placeholder="Description" id="textarea"></textarea>
-      <label for="floatingTextarea">Description</label>
-    </div>
-    <div class="mb-3 mt-3 file" style="width: 400px;">
-      <!-- <label for="formFile" class="form-label">Default file input example</label> -->
-      <input class="form-control" type="file" id="file">
-    </div>
-    <button class="btn-primary btn mt-2" style="width: 400px;"  data-bs-dismiss="modal" id="btn-edit" > Edit</button>
-    </div>
-      </div>
-      
-    </div>
-  </div>
-</div>
- <script type="module" src="./index.js"></script>
+ <script type="module" src="./home.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>

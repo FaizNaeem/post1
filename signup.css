@@ -1,0 +1,109 @@
+body{
+    background-size: cover; 
+    /* background-repeat: no-repeat; */
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 42.8%, black.8%);
+
+    height: 100vh;
+    /* background-attachment: fixed; */ 
+}
+
+.container{
+    background: transparent;
+    /* background-image: url(./1.jpg); */
+    margin-top: 1px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    /* background-color: black; */
+    width: 400px;
+    /* background-image: url(./3.webp); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* margin-top: 10%; */
+    box-shadow: 1px 5px 10px white;
+    border-radius: 20px;
+}
+.cus{
+    width: 400px;
+}
+
+h1{
+    color: white;
+    text-shadow: 2px 5px 10px white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.input-group>.form-control, .input-group>.form-floating, .input-group>.form-select {
+    background: transparent;
+    color: white;
+    font-size: 20px;
+}
+.btn{
+background: transparent;
+color: black;
+font-size: 20px;
+border-color: white;
+color: white;
+}
+.btn:hover{
+    background: none;
+    border-color: white;
+}
+h6{
+    color: white;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/* faiz */
+.container{
+    width: 500px;
+    margin-top: 5%;
+  }
+  .input-field {
+    position: relative;
+    width: 400px;
+    /* height: 44px; */
+    line-height: 44px;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #d3d3d3;
+    transition: 0.2s all;
+    cursor: text;
+  }
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    font-size: 20px;
+    /* height: 40px; */
+    /* margin-top: 10px; */
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: white;
+    background: transparent;
+  }
+  input:invalid {
+    outline: 0;
+     color: white;
+      border-color: white;
+  }
+  input:focus,
+  input:valid {
+    border-color:white;
+  }
+  input:focus~label,
+  input:valid~label {
+    font-size: 14px;
+    top: -24px;
+    color: white;
+  }
+  

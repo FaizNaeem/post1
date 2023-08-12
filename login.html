@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .img{
+      width: 18px;
+      margin-bottom: 4px;
+    }
+    .google{
+      padding: 10px 15px;
+      /* width: 50px; */
+      /* font-size: 40px; */
+      margin-left: 10px;
+      /* height: 40px; */
+      border-radius: 50%;
+      border: none;
+    }
+   
+  </style>
+  </head>
+  <body>
+    <div>
+        <nav class="navbar" id="nav">
+          <div class="container-fluid">
+            <a class="navbar-brand" id="navbar-brand" style="color: white; font-weight: bold;" >Code <i class="fa-solid fa-code"></i></a>
+            <!-- <a href="./home.html"> -->
+              <button class="btn btn-outline-light " id="dark" style="border-color: grey;" type="submit"><i class="fa-solid fa-circle-half-stroke"></i></button>
+              <button class="btn btn-outline-light " id="dark2" style="border-color: grey;" type="submit"><i class="fa-solid fa-moon"></i></button>
+           <!-- </a> -->
+            <a href="./admin.html">
+              <button class="btn btn-outline-light" id="dark1" style="border-color: gray;" type="submit">Login</button>
+           </a>
+          </div>
+        </nav>
+      </div>
+   <div class="container">
+    <h1 class="text-center mt-5 mb-3 ">Login</h1>
+    <form action="">
+      <div class="input-field">
+        <input type="text" id="text_1" required />
+        <label for="name">Your Email:</label>
+      </div>
+    </form>
+    <form action="">
+      <div class="input-field mt-4">
+        <input type="password" id="pass_1" required />
+        <label for="name">Your Password:</label>
+      </div>
+    </form>
+            <button id="btn_1" class="btn btn-primary cus mt-5 mb-4">Login</button>
+            <a href="./.html" class="text-center mb-3">Forget Password?</a>
+            <div class="">
+            <button id="btn_google"  class="google mt-3 mb-4 "><img src="./1298745_google_brand_branding_logo_network_icon.png" alt="" class="img"></button>
+            <button id="btn_google"  class="google mt-3 mb-4"><img src="./211904_social_github_icon (1).png" alt="" class="img"></button>
+            <button id="fb_google"  class="google mt-3 mb-4"><img src="./5296499_fb_facebook_facebook logo_icon.png" alt="" class="img"></button>
+          </div>
+            
+
+            <a href="./signup.html" class="text-center mb-3">SIGNUP</a>
+   </div>
+   <script type="module" src="login.js" defer></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
+<!-- <script type="module" defer src="./config.mjs"></script> -->
+  </body>
+</html>
