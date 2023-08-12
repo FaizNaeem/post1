@@ -1,0 +1,10 @@
+.navbar{
+    position: fixed !important;
+    z-index: 1 !important;
+    top: 0;
+    width: 100% !important;
+}
+.hello{
+
+    width: 100%;
+}
