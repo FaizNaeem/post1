@@ -3,7 +3,39 @@
     z-index: 1 !important;
     top: 0;
     width: 100% !important;
+    /* display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center; */
 }
+.navbar>.container-fluid{
+    /* justify-content: left !important; */
+    justify-content: center !important;
+    /* margin-left: 50px; */
+    /* margin-left: 10px; */
+}
+
+.h{
+    /* float: right; */
+    margin-right: 50px !important;
+}
+.n{
+    margin-left: 900px !important;
+}
+@media only screen and (max-width: 600px) {
+    .n{
+        margin-left: 0px !important;
+    }
+    .h{
+        margin-right: 10px !important;
+    }
+}
+
+/* .h{
+    float: left;
+    position: relative;
+    right: 30%;
+} */
 .hello{
 
     width: 100%;

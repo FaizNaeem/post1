@@ -5,7 +5,7 @@
 }
 .h1{
     text-align: center;
-    background: linear-gradient(112.1deg, rgb(32, 38, 57) 48.5%, black.8%);
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 48.8%, black.8%);
 }
 .custom-img{
     height: 200px;
@@ -39,8 +39,12 @@ h5{
 
     /* margin-top: 10px !important; */
 }
+a{
+    text-decoration: none;
+}
 #main{
     background: linear-gradient(112.1deg, black 50.4%, rgb(32, 38, 57).8%);
+
     /* margin-left: 5px; */
     /* display: none; */
 }

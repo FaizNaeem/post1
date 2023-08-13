@@ -74,6 +74,8 @@ const getDat = async () => {
               <h6>Description:<span class="span">${docSnap.data().textarea}</span></h6>
               <h6>Shipping Price:<span class="span">200Rs</span></h6>
               <div id="total">
+<h6>Total Price:<span class="span" id="span">${num}</span></h6>
+              
               </div>
               <div class="col co">
               </div>
@@ -81,6 +83,7 @@ const getDat = async () => {
               <a   class="h"> <button class="btn btn-success  btn1 mt-5" id="addTO" onclick="store_quantity('${doc.id}')">Purchase Now</button></a>
                     </div>
 `
+
 // console.log(doc.data().title);
             })
             .catch((error) => {
@@ -90,63 +93,78 @@ const getDat = async () => {
         console.log("No such document!");
     }
 }
-if(user){
 
-async function store_quantity(){
-    let quantity = document.getElementById("val").value
-try {
-    const docRef = await addDoc(collection(db, "quantity"), {
-     quantity :quantity
-    });
-    console.log("Document written with ID: ", docRef.id,quantity);
-    window.location.href="./userdetails.html"
-    // alert("data save succes")
-    console.log("id" ,docRef.id );
-    
-} catch (e) {
-    console.error("Error adding document: ", e);
-}
+async function plus(){
+    const storage =getStorage(app)
 
-}
-window.store_quantity = store_quantity
-}
-else{
-    alert("please login")
-}
-function plus(){
-    
+    const docRef = doc(db, "postapp", localStorage.getItem("id"));
+    const docSnap = await getDoc(docRef);
     var value = parseInt(document.getElementById('val').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
-   document.getElementById('val').value = value;
+    document.getElementById('val').value = value;
+    var price= docSnap.data().price
 let data = document.getElementById("val").value
-data= data*20000 +200;
-console.log(data);
-let total = document.getElementById("total").innerHTML=`
-<h6>Total Price:<span class="span">${data}</span></h6>
-`
-
+data= data*price +200;
+console.log(price);
+document.getElementById("span").innerText=data
 
 // console.log(data);
 }
 window.plus=plus
-function minus(){
+async function minus(){
+    const docRef = doc(db, "postapp", localStorage.getItem("id"));
+    const docSnap = await getDoc(docRef);
+
+    var price= docSnap.data().price
     let data = document.getElementById("val").value
-data= data*-20000-200;
+data= price-200*-data;
 console.log(data);
-let total = document.getElementById("total").innerHTML=`
-<h6>Total Price:<span class="span">${data}</span></h6>
-`
+
 
     var value = parseInt(document.getElementById('val').value, 10);
     value = isNaN(value) ? 0 : value;
     --value;
     document.getElementById('val').value = value;
-
+    document.getElementById("span").innerText=data
 }
 window.minus=minus
 getDat();
+if(user){
 
+    async function store_quantity(){
+        let quantity = document.getElementById("val").value
+        const docRef = doc(db, "postapp", localStorage.getItem("id"));
+    const docSnap = await getDoc(docRef);
+    var price= docSnap.data().price
+    var text= docSnap.data().text;
+    console.log(docSnap.data());
+
+        let data = document.getElementById("val").value
+data= data*price +200;
+    try {
+        const docRef = await addDoc(collection(db, "quantity"), {
+         quantity :quantity,
+         TotalPrice:data,
+         ProductName:text
+
+         
+        });
+        console.log("Document written with ID: ", docRef.id,quantity);
+        // window.location.href="./userdetails.html"
+        // alert("data save succes")
+        console.log("id" ,docRef.id );
+        
+    } catch (e) {
+        console.error("Error adding document: ", e);
+    }
+    
+    }
+    window.store_quantity = store_quantity
+    }
+    else{
+        alert("please login")
+    }
 }
 else{
     // alert("please login")

@@ -10,7 +10,7 @@ Swal.fire({
     showCancelButton: true        
   }).then((result) =>{
     if (result.value=="Faiz12345") {
-     document.getElementById("admin").className="admin"
+    //  document.getElementById("admin").className="admin"
     
 
 document.getElementById("btn").addEventListener("click", async () => {
@@ -64,5 +64,7 @@ else{
         text: 'Please Enter Correct Key',
        
       })
+      location.reload()
+
 }
 });

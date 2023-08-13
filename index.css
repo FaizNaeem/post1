@@ -1,0 +1,39 @@
+.head{
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 44.4%, black.8%);
+
+}
+.h-left{
+    color: white;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer{
+    background-color:  rgb(32, 38, 57);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.p{
+    /* margin-top: 20px; */
+
+}
+.hi{
+    /* margin-top: 80px;
+    margin-left: 50px; */
+    font-size: 50px;
+}
+.span{
+    display: block;
+    /* font-size: 40px !important; */
+    color: rgb(190, 183, 183);
+    font-size: 40px;
+}
+.w{
+    width: 80% !important;
+
+}
