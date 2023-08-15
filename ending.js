@@ -39,6 +39,7 @@ onAuthStateChanged(auth, async (user) => {
             // doc.data() is never undefined for query doc snapshots
             console.log(doc.id, " => ", doc.data());
             document.getElementById('q').value = doc.data().quantity;
+            document.getElementById('total').value = doc.data().TotalPrice;
             // document.getElementById('span').innerText = doc.data().TotalPrice;
 
         });
@@ -77,19 +78,9 @@ onAuthStateChanged(auth, async (user) => {
                   `
                   
                 //   doc.data()
+                
                   document.getElementById("hello").innerHTML+=`
-                  
-                  <h6>Product Name:<span class="span">${docSnap.data().text}</span></h6>
-              <h6>Price:<span class="span">${docSnap.data().price}Rs</span></h6>
-              <h6>Description:<span class="span">${docSnap.data().textarea}</span></h6>
-              <div id="total">
-<h6>Total Price:<span class="span" id="span"></span></h6>
-              
-              </div>
-              <div class="col co">
-              </div>
-      
-              <a   class="h"> <button class="btn btn-success  btn1 mt-5" id="addTO" onclick="store_quantity('${doc.id}')">Purchase Now</button></a>
+            <button class="btn btn-success btn1 mt-4">Confirm Order</button>
                     `
 });
 }    
