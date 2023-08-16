@@ -171,7 +171,7 @@ window.location.href="./userdetails.html"
 }
 else{
     // alert("please login")
-    alert("first login")
+    // alert("first login")
     setTimeout(()=>{
 window.location.href="./login.html"
     },1000)
