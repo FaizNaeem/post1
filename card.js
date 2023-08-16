@@ -154,7 +154,10 @@ data= data*price +200;
         // window.location.href="./userdetails.html"
         // alert("data save succes")
         console.log("id" ,docRef.id );
-        
+        setTimeout(()=>{
+window.location.href="./userdetails.html"
+        },1000)
+        // window.location.href()
     } catch (e) {
         console.error("Error adding document: ", e);
     }
