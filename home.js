@@ -78,26 +78,26 @@ function card(e) {
 window.card = card
 get_date()
 
-document.getElementById("dark").addEventListener("click",()=>{
-document.getElementById("main").style.background="white"
-document.getElementById("card-main").style.color="black"
-document.getElementById("black").style.color="black"
-document.getElementById("p").style.color="black"
-document.getElementById("h5").style.color="black"
-document.getElementById("Change").style.background="black"
-document.getElementById("edit").style.background="black"
-// document.getElementById("Change").style.border="1px solid black !important"
-document.getElementById("card-main").style.border="1px solid black"
-document.getElementById("nav").style.background="white"
-document.getElementById("navbar-brand").style.color="black"
-document.getElementById("dark").style.color="black"
-document.getElementById("dark1").style.color="black"
-document.getElementById("dark2").style.color="black"
-document.getElementById("dlt").style.color="black"
-// document.getElementById("dlt").style.border="1px solid black"
-document.getElementById("post").style.color="black"
-document.getElementById("post").style.background="white"
+// document.getElementById("dark").addEventListener("click",()=>{
+// document.getElementById("main").style.background="white"
+// document.getElementById("card-main").style.color="black"
+// document.getElementById("black").style.color="black"
+// document.getElementById("p").style.color="black"
+// document.getElementById("h5").style.color="black"
+// document.getElementById("Change").style.background="black"
+// document.getElementById("edit").style.background="black"
+// // document.getElementById("Change").style.border="1px solid black !important"
+// document.getElementById("card-main").style.border="1px solid black"
+// document.getElementById("nav").style.background="white"
+// document.getElementById("navbar-brand").style.color="black"
+// document.getElementById("dark").style.color="black"
+// document.getElementById("dark1").style.color="black"
+// document.getElementById("dark2").style.color="black"
+// document.getElementById("dlt").style.color="black"
+// // document.getElementById("dlt").style.border="1px solid black"
+// document.getElementById("post").style.color="black"
+// document.getElementById("post").style.background="white"
 
-})
+// })
 
 
