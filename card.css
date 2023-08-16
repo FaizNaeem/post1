@@ -22,6 +22,19 @@ h6{
     font-weight: bold;
 
 }
+@media only screen and (max-width: 450px) {
+    img{
+        width: 400px;
+        margin-left: 20px;
+        /* display: flex; */
+        /* align-items: center;
+        justify-content: center; */
+    }
+    .right{
+        width: 400px;
+        margin-left: 20px;
+    }
+}
 .h4{
     text-align: center;
 }
