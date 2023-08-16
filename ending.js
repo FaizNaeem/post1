@@ -60,6 +60,7 @@ onAuthStateChanged(auth, async (user) => {
         // console.log("hello2");
         const docRef = doc(db, "postapp", localStorage.getItem("id"));
         const docSnap = await getDoc(docRef);
+        
     
         // let quantity = document.getElementById("val")
         // console.log(quantity);
@@ -67,6 +68,8 @@ onAuthStateChanged(auth, async (user) => {
         // console.log(num);
         if (docSnap.exists()) {
             console.log("Document data:", docSnap.data().text);
+            document.getElementById('pro').value = docSnap.data().text;
+
             getDownloadURL(ref(storage,  localStorage.getItem("id")))
                 .then((url) => {
                     document.getElementById("hello").innerHTML+=`
@@ -76,13 +79,55 @@ onAuthStateChanged(auth, async (user) => {
                     </div>
                     
                   `
-                  
-                //   doc.data()
-                
                   document.getElementById("hello").innerHTML+=`
-            <button class="btn btn-success btn1 mt-4">Confirm Order</button>
+            <button class="btn btn-success btn1 mt-4" id="btn1">Confirm Order</button>
                     `
+                    document.getElementById("btn1").addEventListener("click",async()=>{
+                        let name = document.getElementById("name").value
+                        let number = document.getElementById("number").value
+                        let ad = document.getElementById("ad").value
+                        let q = document.getElementById("q").value
+                        let postalcode = document.getElementById("postalcode").value
+                        let city = document.getElementById("city").value
+                        let email = document.getElementById("email").value
+                        let total = document.getElementById("total").value
+                        let pro = document.getElementById("pro").value
+                        try {
+                            const docRef = await addDoc(collection(db, "ConfirmOrderDetails"), {
+                               name:name,
+                               number:number,
+                               Adress:ad,
+                               Quantity:q,
+                               postalcode:postalcode,
+                               city:city,
+                               email:email,
+                               total:total,
+                               productName:pro
+                            });
+                            console.log("Document written with ID: ", docRef.id);
+                            // alert("data save succes")
+                            // Swal.fire({
+                            //     'Good job!',
+                            //     'Order Confirm',
+                            //     'success'
+                                
+                            //  } )
+                             Swal.fire({
+                                icon: 'success',
+                                // title: '',
+                                text: 'Order Confirm',
+                                footer: '<a href="index.html">Go home And continue Shopping</a>'
+                              })
+                            // img_id =docRef.id
+                            // console.log("id" ,img_id );
+                        } catch (e) {
+                            console.error("Error adding document: ", e);
+                        }
+                    })
+                    
 });
 }    
+
     }
+    
     });
